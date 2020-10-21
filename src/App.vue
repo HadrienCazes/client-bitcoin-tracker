@@ -24,7 +24,7 @@ export default {
   }),
   async mounted () {
   this.loaded = false;
-  axios.get('http://localhost:3000/data')
+  axios.get('http://localhost:3000/api/bitcoin/400')
   .then((res) => {
     for (var i in res.data) {
       this.labels.push(moment(Date(res.data[i].Date)).format('MMMM Do YYYY, h:mm:ss a'));
